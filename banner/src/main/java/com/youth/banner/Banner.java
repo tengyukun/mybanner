@@ -545,6 +545,15 @@ public class Banner extends FrameLayout implements OnPageChangeListener {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
+		
+		
+		 @Override
+        public float getPageWidth(int position) {
+            if (position == 0 || position == 2) {
+                return 0.8f;
+            }
+            return 1f;
+        }
 
     }
 
